@@ -9,11 +9,11 @@ settings:
     langs: us-en,ja-jp,zh-cn
   versions:
     - name: SnapCenter Software
-      url: https://review.docs.netapp.com/us-en/snapcenter_sc46_releasebranch/index.html
-      version-number: "4.6"
-    - name: SnapCenter Software
       url: /snapcenter-45
       version-number: "4.5"
+    - name: SnapCenter Software
+      url: https://review.docs.netapp.com/us-en/snapcenter_sc46_releasebranch/index.html
+      version-number: "4.6"
 
 sidebar:
   entries:
