@@ -1,15 +1,16 @@
 ---
 settings:
-  name: SnapCenter Software
+  name: SnapCenter Software 4.5
   internal:
     pdf_enabled: true
   prod:
     pdf_enabled: true
     harmony_enabled: true
     langs: us-en,ja-jp,zh-cn
+
 sidebar:
   entries:
-    - title: SnapCenter Software docs
+    - title: SnapCenter Software 4.5 docs
       url: /index.html
     - title: Release notes
       url: /reference_release_notes.html
@@ -93,6 +94,6 @@ homepage:
         - title: Command Reference Guide
           url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2877144
         - title: Documentation for earlier versions of SnapCenter
-          url: https://docs.netapp.com/ocsc-44/topic/com.netapp.ndc.ocsc-vers/GUID-C35C3D6E-1833-4F73-AE09-38137FC69F8C.html
+          url: https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62018
         - title: NetApp Knowledge Base - SnapCenter
           url: https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter
