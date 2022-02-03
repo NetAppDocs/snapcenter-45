@@ -14,7 +14,7 @@ settings:
     - name: SnapCenter Software
       url: /snapcenter
       version-number: "4.6"
-
+      
 sidebar:
   entries:
     - title: SnapCenter Software 4.5 docs
