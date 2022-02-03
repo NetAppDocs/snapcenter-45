@@ -6,7 +6,15 @@ settings:
   prod:
     pdf_enabled: true
     harmony_enabled: true
-
+    langs: us-en,ja-jp,zh-cn
+  versions:
+    - name: SnapCenter Software
+      url: /snapcenter-45
+      version-number: "4.5"
+    - name: SnapCenter Software
+      url: /snapcenter
+      version-number: "4.6"
+      
 sidebar:
   entries:
     - title: SnapCenter Software 4.5 docs
