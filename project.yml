@@ -6,7 +6,6 @@ settings:
   prod:
     pdf_enabled: true
     harmony_enabled: true
-    langs: us-en,ja-jp,zh-cn
   versions:
     - name: SnapCenter Software
       url: /snapcenter-45
@@ -20,7 +19,7 @@ sidebar:
     - title: SnapCenter Software 4.5 docs
       url: /index.html
     - title: Release notes
-      url: /reference_release_notes.html
+      url: /release-notes.html
     - section: concept
     - section: install
     - section: protect-scsql
@@ -34,7 +33,7 @@ sidebar:
     - section: uninstall
     - section: sc-automation
     - title: Legal notices
-      url: /reference_legal_notices.html
+      url: /legal-notices.html
 
 homepage:
   tiles:
