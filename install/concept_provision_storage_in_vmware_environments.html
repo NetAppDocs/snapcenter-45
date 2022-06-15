@@ -9,14 +9,14 @@
   <meta property="og:title" content="Provision storage in VMware environments" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://docs.netapp.com/us-en/snapcenter-45/install/concept_provision_storage_in_vmware_environments.html" />
-	<meta property="og:description" content="You can use the SnapCenter Plug-in for Microsoft Windows in VMware environments to create and manage LUNs and manage Snapshot backup copies." />
+	<meta property="og:description" content="You can use the SnapCenter Plug-in for Microsoft Windows in VMware environments to create and manage LUNs and manage the Snapshot copies." />
   <meta property="og:image" content="https://docs.netapp.com/us-en/snapcenter-45/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
-  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="You can use the SnapCenter Plug-in for Microsoft Windows in VMware environments to create and manage LUNs and manage Snapshot backup copies.">
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="You can use the SnapCenter Plug-in for Microsoft Windows in VMware environments to create and manage LUNs and manage the Snapshot copies.">
   <meta name="keywords" content=" guest OS, VMware ESXi server, limitations, RDM, Microsoft cluster"><!-- Icons -->
   <link rel="icon" href="/us-en/snapcenter-45/images/favicon.ico" type="image/x-icon">
 
@@ -301,35 +301,27 @@
     </div>
   </div>
   <div class="n-property-bar__toolbar">
-    <!-- Start Language Selector --><div id="ie-i18n" class="n-property-bar__lang-selector">
-      <div id="ie-i18n-menu">
-      <span class="ie-i18n-lang">English</span>
-        <button class="ie-i18n-icon-container" type="button">
+    <!-- Start Language Selector --><div id="language-dropdown" class="custom-dropdown custom-dropdown-lang">
+      <div class="custom-dropdown-select custom-dropdown-select-lang">
+      <span class="lang-name">English</span>
           <svg class="n-globe__icon" aria-labelledby="title">
             <title>globe</title>
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/snapcenter-45/common/svg/sprite.svg#globe"></use>
           </svg>
         </button>
       </div>
-      <div id="n-property-navigation-bar__menu--language-selector" class="ie-i18n-results-container n-menu n-menu--v3 n-menu--is-active" style="display: none;">
-        <div class="n-language-selector-menu">
-          <ul class="n-menu__list">
-            <li class="n-menu__list-column">
-              <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/us-en/snapcenter-45/install/concept_provision_storage_in_vmware_environments.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ja-jp/snapcenter-45/install/concept_provision_storage_in_vmware_environments.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ko-kr/snapcenter-45/install/concept_provision_storage_in_vmware_environments.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-cn/snapcenter-45/install/concept_provision_storage_in_vmware_environments.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-tw/snapcenter-45/install/concept_provision_storage_in_vmware_environments.html" class="n-menu__header-text"><span translate="no" class="notranslate">繁體中文</span></a>
-                </li></ul>
-            </li>
-          </ul>
-        </div>
-      </div>
+
+      <ul class="custom-dropdown-menu"><li>
+          <a href="https://docs.netapp.com/us-en/snapcenter-45/install/concept_provision_storage_in_vmware_environments.html" target="_self"><span translate="no" class="notranslate">English</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ja-jp/snapcenter-45/install/concept_provision_storage_in_vmware_environments.html" target="_self"><span translate="no" class="notranslate">日本語</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-cn/snapcenter-45/install/concept_provision_storage_in_vmware_environments.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-tw/snapcenter-45/install/concept_provision_storage_in_vmware_environments.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ko-kr/snapcenter-45/install/concept_provision_storage_in_vmware_environments.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
+        </li></ul>
     </div><!-- End Language Selector -->
 
     <div class="n-property-bar__cta"></div>
@@ -3077,7 +3069,7 @@
     $("#toggleContainerPdf").toggle('display');
     $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
   });
-</script><div class="sidebar-nav-container">
+</script><div class="sidebar-nav-container" id="mysidebardiv">
   <ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="/us-en/snapcenter-45/index.html">
         SnapCenter Software 4.5 docs
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/snapcenter-45/release-notes.html">
@@ -4189,16 +4181,16 @@
 <p class="page-details">
   
     
-    <time datetime="2021-12-07 17:36:32 +0000">12/07/2021</time>
+    <time datetime="2022-06-13 15:16:27 +0000">06/13/2022</time>
     
   
 
 <span>Contributors
-  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-soumikd">
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-nsriram">
     <img  class="avatar avatar-small"
-          alt="netapp-soumikd"
+          alt="netapp-nsriram"
           width="20" height="20"
-          src="https://avatars.githubusercontent.com/u/64966556?v=4"
+          src="https://avatars.githubusercontent.com/u/64957347?v=4"
           style="border-radius: 50%;"/>
   </a>
   
@@ -4218,7 +4210,7 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph lead">
-<p>You can use the SnapCenter Plug-in for Microsoft Windows in VMware environments to create and manage LUNs and manage Snapshot backup copies.</p>
+<p>You can use the SnapCenter Plug-in for Microsoft Windows in VMware environments to create and manage LUNs and manage the Snapshot copies.</p>
 </div>
 </div>
 </div>
@@ -4579,4 +4571,5 @@ For information, see <a href="https://docs.vmware.com/en/VMware-vSphere/6.7/com.
     </script>
     <script src='/us-en/snapcenter-45/js/www-ntap.js'></script>
     <script src='/us-en/snapcenter-45/js/tabbed-blocks.js'></script>
+    <script src='/us-en/snapcenter-45/js/sidebar.js'></script>
   </body></html>

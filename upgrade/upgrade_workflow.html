@@ -301,35 +301,27 @@
     </div>
   </div>
   <div class="n-property-bar__toolbar">
-    <!-- Start Language Selector --><div id="ie-i18n" class="n-property-bar__lang-selector">
-      <div id="ie-i18n-menu">
-      <span class="ie-i18n-lang">English</span>
-        <button class="ie-i18n-icon-container" type="button">
+    <!-- Start Language Selector --><div id="language-dropdown" class="custom-dropdown custom-dropdown-lang">
+      <div class="custom-dropdown-select custom-dropdown-select-lang">
+      <span class="lang-name">English</span>
           <svg class="n-globe__icon" aria-labelledby="title">
             <title>globe</title>
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/snapcenter-45/common/svg/sprite.svg#globe"></use>
           </svg>
         </button>
       </div>
-      <div id="n-property-navigation-bar__menu--language-selector" class="ie-i18n-results-container n-menu n-menu--v3 n-menu--is-active" style="display: none;">
-        <div class="n-language-selector-menu">
-          <ul class="n-menu__list">
-            <li class="n-menu__list-column">
-              <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/us-en/snapcenter-45/upgrade/upgrade_workflow.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ja-jp/snapcenter-45/upgrade/upgrade_workflow.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ko-kr/snapcenter-45/upgrade/upgrade_workflow.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-cn/snapcenter-45/upgrade/upgrade_workflow.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-tw/snapcenter-45/upgrade/upgrade_workflow.html" class="n-menu__header-text"><span translate="no" class="notranslate">繁體中文</span></a>
-                </li></ul>
-            </li>
-          </ul>
-        </div>
-      </div>
+
+      <ul class="custom-dropdown-menu"><li>
+          <a href="https://docs.netapp.com/us-en/snapcenter-45/upgrade/upgrade_workflow.html" target="_self"><span translate="no" class="notranslate">English</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ja-jp/snapcenter-45/upgrade/upgrade_workflow.html" target="_self"><span translate="no" class="notranslate">日本語</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-cn/snapcenter-45/upgrade/upgrade_workflow.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-tw/snapcenter-45/upgrade/upgrade_workflow.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ko-kr/snapcenter-45/upgrade/upgrade_workflow.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
+        </li></ul>
     </div><!-- End Language Selector -->
 
     <div class="n-property-bar__cta"></div>
@@ -3077,7 +3069,7 @@
     $("#toggleContainerPdf").toggle('display');
     $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
   });
-</script><div class="sidebar-nav-container">
+</script><div class="sidebar-nav-container" id="mysidebardiv">
   <ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="/us-en/snapcenter-45/index.html">
         SnapCenter Software 4.5 docs
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/snapcenter-45/release-notes.html">
@@ -4189,16 +4181,16 @@
 <p class="page-details">
   
     
-    <time datetime="2021-06-16 13:57:42 +0000">06/16/2021</time>
+    <time datetime="2022-06-13 14:31:02 +0000">06/13/2022</time>
     
   
 
 <span>Contributors
-  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-soumikd">
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-nsriram">
     <img  class="avatar avatar-small"
-          alt="netapp-soumikd"
+          alt="netapp-nsriram"
           width="20" height="20"
-          src="https://avatars.githubusercontent.com/u/64966556?v=4"
+          src="https://avatars.githubusercontent.com/u/64957347?v=4"
           style="border-radius: 50%;"/>
   </a>
   
@@ -4207,6 +4199,8 @@
 
 </p>
 
+<div id="preamble">
+<div class="sectionbody">
 <div class="paragraph lead">
 <p>Each release of SnapCenter contains an updated SnapCenter Server and plug-in package. Plug-in package updates are distributed with the SnapCenter installer. You can configure SnapCenter to check for available updates.</p>
 </div>
@@ -4216,6 +4210,119 @@
 <div class="imageblock">
 <div class="content">
 <img src="../media/upgrade_workflow.png" alt="upgrade workflow">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="supported-upgrade-paths">Supported upgrade paths</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">If you are on SnapCenter Server version&#8230;&#8203;</th>
+<th class="tableblock halign-left valign-top">You can directly upgrade SnapCenter Server to&#8230;&#8203;</th>
+<th class="tableblock halign-left valign-top">Supported plug-in versions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">4.2.x</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.3.x</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>4.2.x</p>
+</li>
+<li>
+<p>4.3.x</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.4.x</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>4.4.x</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">4.3.x</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.4.x</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>4.3.x</p>
+</li>
+<li>
+<p>4.4.x</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.5.x</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>4.5.x</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>4.4.x</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>4.5.x</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>4.4.x</p>
+</li>
+<li>
+<p>4.5.x</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/snapcenter-45/images/important.svg" alt="Important">
+</td>
+<td class="content">
+For example, if you are on SnapCenter version 4.2.x and want to upgrade to 4.5.x, you should first upgrade to 4.4.x and then do a rolling upgrade to 4.5.x.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/snapcenter-45/images/note.svg" alt="Note">
+</td>
+<td class="content">
+For information about upgrading the SnapCenter Plug-in for VMware vSphere, see <a href="https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_upgrade.html" target="_blank" rel="noopener">Upgrade SnapCenter Plug-in for VMware vSphere</a>.
+</td>
+</tr>
+</table>
+</div>
 </div>
 </div>
 
@@ -4364,4 +4471,5 @@
     </script>
     <script src='/us-en/snapcenter-45/js/www-ntap.js'></script>
     <script src='/us-en/snapcenter-45/js/tabbed-blocks.js'></script>
+    <script src='/us-en/snapcenter-45/js/sidebar.js'></script>
   </body></html>

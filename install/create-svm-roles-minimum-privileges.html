@@ -301,35 +301,27 @@
     </div>
   </div>
   <div class="n-property-bar__toolbar">
-    <!-- Start Language Selector --><div id="ie-i18n" class="n-property-bar__lang-selector">
-      <div id="ie-i18n-menu">
-      <span class="ie-i18n-lang">English</span>
-        <button class="ie-i18n-icon-container" type="button">
+    <!-- Start Language Selector --><div id="language-dropdown" class="custom-dropdown custom-dropdown-lang">
+      <div class="custom-dropdown-select custom-dropdown-select-lang">
+      <span class="lang-name">English</span>
           <svg class="n-globe__icon" aria-labelledby="title">
             <title>globe</title>
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/snapcenter-45/common/svg/sprite.svg#globe"></use>
           </svg>
         </button>
       </div>
-      <div id="n-property-navigation-bar__menu--language-selector" class="ie-i18n-results-container n-menu n-menu--v3 n-menu--is-active" style="display: none;">
-        <div class="n-language-selector-menu">
-          <ul class="n-menu__list">
-            <li class="n-menu__list-column">
-              <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/us-en/snapcenter-45/install/create-svm-roles-minimum-privileges.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ja-jp/snapcenter-45/install/create-svm-roles-minimum-privileges.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ko-kr/snapcenter-45/install/create-svm-roles-minimum-privileges.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-cn/snapcenter-45/install/create-svm-roles-minimum-privileges.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-tw/snapcenter-45/install/create-svm-roles-minimum-privileges.html" class="n-menu__header-text"><span translate="no" class="notranslate">繁體中文</span></a>
-                </li></ul>
-            </li>
-          </ul>
-        </div>
-      </div>
+
+      <ul class="custom-dropdown-menu"><li>
+          <a href="https://docs.netapp.com/us-en/snapcenter-45/install/create-svm-roles-minimum-privileges.html" target="_self"><span translate="no" class="notranslate">English</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ja-jp/snapcenter-45/install/create-svm-roles-minimum-privileges.html" target="_self"><span translate="no" class="notranslate">日本語</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-cn/snapcenter-45/install/create-svm-roles-minimum-privileges.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-tw/snapcenter-45/install/create-svm-roles-minimum-privileges.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ko-kr/snapcenter-45/install/create-svm-roles-minimum-privileges.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
+        </li></ul>
     </div><!-- End Language Selector -->
 
     <div class="n-property-bar__cta"></div>
@@ -3077,7 +3069,7 @@
     $("#toggleContainerPdf").toggle('display');
     $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
   });
-</script><div class="sidebar-nav-container">
+</script><div class="sidebar-nav-container" id="mysidebardiv">
   <ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="/us-en/snapcenter-45/index.html">
         SnapCenter Software 4.5 docs
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/snapcenter-45/release-notes.html">
@@ -4189,16 +4181,16 @@
 <p class="page-details">
   
     
-    <time datetime="2021-12-07 17:36:32 +0000">12/07/2021</time>
+    <time datetime="2022-06-13 14:31:02 +0000">06/13/2022</time>
     
   
 
 <span>Contributors
-  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-soumikd">
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-nsriram">
     <img  class="avatar avatar-small"
-          alt="netapp-soumikd"
+          alt="netapp-nsriram"
           width="20" height="20"
-          src="https://avatars.githubusercontent.com/u/64966556?v=4"
+          src="https://avatars.githubusercontent.com/u/64957347?v=4"
           style="border-radius: 50%;"/>
   </a>
   
@@ -4260,19 +4252,19 @@ You should repeat this command for each permission.
 <div class="ulist">
 <ul>
 <li>
-<p>'security login role create -role SVM_SVM_Role_Name -cmddirname "snapmirror list-destinations" -vserver SVM_Name -access all'</p>
+<p><code>security login role create -role SVM_SVM_Role_Name -cmddirname "snapmirror list-destinations" -vserver SVM_Name -access all</code></p>
 </li>
 <li>
-<p>'security login role create -role SVM_SVM_Role_Name -cmddirname "event generate-autosupport-log" -vserver SVM_Name -access all'</p>
+<p><code>security login role create -role SVM_SVM_Role_Name -cmddirname "event generate-autosupport-log" -vserver SVM_Name -access all</code></p>
 </li>
 <li>
-<p>'security login role create -vserver SVM_Name -role SVM_SVM_Role_Name -cmddirname "job history show" -access all'</p>
+<p><code>security login role create -vserver SVM_Name -role SVM_SVM_Role_Name -cmddirname "job history show" -access all</code></p>
 </li>
 <li>
-<p>'security login role create -vserver SVM_Name -role SVM_SVM_Role_Name -cmddirname "job stop" -access all'</p>
+<p><code>security login role create -vserver SVM_Name -role SVM_SVM_Role_Name -cmddirname "job stop" -access all</code></p>
 </li>
 <li>
-<p>'security login role create -vserver SVM_Name -role SVM_SVM_SVM_Role_Name -cmddirname "lun" -access all'</p>
+<p><code>security login role create -vserver SVM_Name -role SVM_SVM_SVM_Role_Name -cmddirname "lun" -access all</code></p>
 </li>
 <li>
 <p><code>security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "lun create" -access all</code></p>
@@ -4299,7 +4291,7 @@ You should repeat this command for each permission.
 <p><code>security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "lun mapping add-reporting-nodes" -access all</code></p>
 </li>
 <li>
-<p>'security login role create -vserver SVM_Name -role SVM_SVM_Role_Name -cmddirname "lun mapping create" -access all'</p>
+<p><code>security login role create -vserver SVM_Name -role SVM_SVM_Role_Name -cmddirname "lun mapping create" -access all</code></p>
 </li>
 <li>
 <p><code>security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "lun mapping delete" -access all</code></p>
@@ -4332,7 +4324,7 @@ You should repeat this command for each permission.
 <p><code>security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "lun show" -access all</code></p>
 </li>
 <li>
-<p>`security login role create -vserver SVM_Name -role SVM_SVM_Role_Name -cmddirname "network interface" -access readonly'</p>
+<p><code>security login role create -vserver SVM_Name -role SVM_SVM_Role_Name -cmddirname "network interface" -access readonly</code></p>
 </li>
 <li>
 <p><code>security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "snapmirror policy add-rule" -access all</code></p>
@@ -4462,7 +4454,7 @@ You should repeat this command for each permission.
 </li>
 <li>
 <p><code>security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "vserver export-policy show" -access all</code>
-*'security login role create -vserver SVM_Name -role SVM_SVM_Role_Name -cmddirname "vserver iscsi connection show" -access all'</p>
+*<code>security login role create -vserver SVM_Name -role SVM_SVM_Role_Name -cmddirname "vserver iscsi connection show" -access all</code></p>
 </li>
 <li>
 <p><code>security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "vserver" -access readonly</code></p>
@@ -4474,7 +4466,7 @@ You should repeat this command for each permission.
 <p><code>security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "vserver iscsi" -access all</code></p>
 </li>
 <li>
-<p>'security login role create -vserver SVM_Name -role SVM_SVM_Role_Name -cmddirname "volume clone split status" -access all'</p>
+<p><code>security login role create -vserver SVM_Name -role SVM_SVM_Role_Name -cmddirname "volume clone split status" -access all</code></p>
 </li>
 </ul>
 </div>
@@ -4626,4 +4618,5 @@ You should repeat this command for each permission.
     </script>
     <script src='/us-en/snapcenter-45/js/www-ntap.js'></script>
     <script src='/us-en/snapcenter-45/js/tabbed-blocks.js'></script>
+    <script src='/us-en/snapcenter-45/js/sidebar.js'></script>
   </body></html>

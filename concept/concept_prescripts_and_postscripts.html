@@ -301,35 +301,27 @@
     </div>
   </div>
   <div class="n-property-bar__toolbar">
-    <!-- Start Language Selector --><div id="ie-i18n" class="n-property-bar__lang-selector">
-      <div id="ie-i18n-menu">
-      <span class="ie-i18n-lang">English</span>
-        <button class="ie-i18n-icon-container" type="button">
+    <!-- Start Language Selector --><div id="language-dropdown" class="custom-dropdown custom-dropdown-lang">
+      <div class="custom-dropdown-select custom-dropdown-select-lang">
+      <span class="lang-name">English</span>
           <svg class="n-globe__icon" aria-labelledby="title">
             <title>globe</title>
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/snapcenter-45/common/svg/sprite.svg#globe"></use>
           </svg>
         </button>
       </div>
-      <div id="n-property-navigation-bar__menu--language-selector" class="ie-i18n-results-container n-menu n-menu--v3 n-menu--is-active" style="display: none;">
-        <div class="n-language-selector-menu">
-          <ul class="n-menu__list">
-            <li class="n-menu__list-column">
-              <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/us-en/snapcenter-45/concept/concept_prescripts_and_postscripts.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ja-jp/snapcenter-45/concept/concept_prescripts_and_postscripts.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ko-kr/snapcenter-45/concept/concept_prescripts_and_postscripts.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-cn/snapcenter-45/concept/concept_prescripts_and_postscripts.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-tw/snapcenter-45/concept/concept_prescripts_and_postscripts.html" class="n-menu__header-text"><span translate="no" class="notranslate">繁體中文</span></a>
-                </li></ul>
-            </li>
-          </ul>
-        </div>
-      </div>
+
+      <ul class="custom-dropdown-menu"><li>
+          <a href="https://docs.netapp.com/us-en/snapcenter-45/concept/concept_prescripts_and_postscripts.html" target="_self"><span translate="no" class="notranslate">English</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ja-jp/snapcenter-45/concept/concept_prescripts_and_postscripts.html" target="_self"><span translate="no" class="notranslate">日本語</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-cn/snapcenter-45/concept/concept_prescripts_and_postscripts.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-tw/snapcenter-45/concept/concept_prescripts_and_postscripts.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ko-kr/snapcenter-45/concept/concept_prescripts_and_postscripts.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
+        </li></ul>
     </div><!-- End Language Selector -->
 
     <div class="n-property-bar__cta"></div>
@@ -3077,7 +3069,7 @@
     $("#toggleContainerPdf").toggle('display');
     $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
   });
-</script><div class="sidebar-nav-container">
+</script><div class="sidebar-nav-container" id="mysidebardiv">
   <ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="/us-en/snapcenter-45/index.html">
         SnapCenter Software 4.5 docs
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/snapcenter-45/release-notes.html">
@@ -4189,16 +4181,16 @@
 <p class="page-details">
   
     
-    <time datetime="2021-06-16 19:45:49 +0000">06/16/2021</time>
+    <time datetime="2022-06-13 14:31:02 +0000">06/13/2022</time>
     
   
 
 <span>Contributors
-  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-soumikd">
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-nsriram">
     <img  class="avatar avatar-small"
-          alt="netapp-soumikd"
+          alt="netapp-nsriram"
           width="20" height="20"
-          src="https://avatars.githubusercontent.com/u/64966556?v=4"
+          src="https://avatars.githubusercontent.com/u/64957347?v=4"
           style="border-radius: 50%;"/>
   </a>
   
@@ -4226,7 +4218,7 @@
 <h2 id="supported-script-types">Supported script types</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The following type of scripts are supported:</p>
+<p>The following type of scripts are supported for Windows:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -4241,13 +4233,51 @@
 </li>
 </ul>
 </div>
+<div class="paragraph">
+<p>The following types of scripts are supported for UNIX:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Perl scripts</p>
+</li>
+<li>
+<p>Python scripts</p>
+</li>
+<li>
+<p>Shell scripts</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/snapcenter-45/images/note.svg" alt="Note">
+</td>
+<td class="content">
+Along with default bash shell other shells like sh-shell, k-shell, and c-shell are also supported.
+</td>
+</tr>
+</table>
+</div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="script-path">Script path</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>All prescripts and postscripts that are run as part of SnapCenter operations, on nonvirtualized and on virtualized storage systems, are executed on the plug-in host. Therefore, the scripts must be located on the plug-in host or on a SMB share accessible by the plug-in host.</p>
+<p>All prescripts and postscripts that are run as part of SnapCenter operations, on nonvirtualized and on virtualized storage systems, are executed on the plug-in host.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The Windows scripts should be located on the plug-in host or on a SMB share accessible by the plug-in host.</p>
+</li>
+<li>
+<p>The UNIX scripts should be located on the plug-in host.</p>
+</li>
+</ul>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -4270,7 +4300,19 @@ The script path is validated at the time the script is executed.
 <p>Scripts are specified in backup policies. When a backup job is started, the policy automatically associates the script with the resources being backed up. When you create a backup policy, you can specify the prescript and postscript arguments.</p>
 </div>
 <div class="paragraph">
-<p>To specify multiple scripts, press <strong>Enter</strong> after each script path to list each script on a separate line. Semicolons (;) are not allowed. You can specify multiple prescripts and multiple postscripts. A single script can be coded as both a prescript and a postscript and can call other scripts.</p>
+<p>Only for Windows, you can specify multiple scripts.  You should press <strong>Enter</strong> after each script path to list each script on a separate line. Semicolons (;) are not allowed. You can specify multiple prescripts and multiple postscripts. A single script can be coded as both a prescript and a postscript and can call other scripts.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/snapcenter-45/images/note.svg" alt="Note">
+</td>
+<td class="content">
+For UNIX, you cannot specify multiple scripts.
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
@@ -4278,7 +4320,10 @@ The script path is validated at the time the script is executed.
 <h2 id="script-timeouts">Script timeouts</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The timeout for backup scripts is 15 minutes and cannot be modified.</p>
+<p>For Windows, the timeout is set to 15 minutes and cannot be modified.</p>
+</div>
+<div class="paragraph">
+<p>For UNIX, the timeout is set to 60 seconds, by default. You can modify the timeout value.</p>
 </div>
 </div>
 </div>
@@ -4286,7 +4331,10 @@ The script path is validated at the time the script is executed.
 <h2 id="script-output">Script output</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The default directory for the prescripts and postscripts output files is Windows\System32.</p>
+<p>The default directory for the Windows prescripts and postscripts output files is Windows\System32.</p>
+</div>
+<div class="paragraph">
+<p>There is no default location for the UNIX prescripts and postscripts. You can redirect the output file to any preferred location.</p>
 </div>
 </div>
 </div>
@@ -4436,4 +4484,5 @@ The script path is validated at the time the script is executed.
     </script>
     <script src='/us-en/snapcenter-45/js/www-ntap.js'></script>
     <script src='/us-en/snapcenter-45/js/tabbed-blocks.js'></script>
+    <script src='/us-en/snapcenter-45/js/sidebar.js'></script>
   </body></html>
