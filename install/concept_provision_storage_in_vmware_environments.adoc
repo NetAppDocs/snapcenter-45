@@ -2,14 +2,14 @@
 permalink: install/concept_provision_storage_in_vmware_environments.html
 sidebar: sidebar
 keywords: guest OS, VMware ESXi server, limitations, RDM, Microsoft cluster
-summary: 'You can use the SnapCenter Plug-in for Microsoft Windows in VMware environments to create and manage LUNs and manage Snapshot backup copies.'
+summary: 'You can use the SnapCenter Plug-in for Microsoft Windows in VMware environments to create and manage LUNs and manage the Snapshot copies.'
 ---
 = Provision storage in VMware environments
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-You can use the SnapCenter Plug-in for Microsoft Windows in VMware environments to create and manage LUNs and manage Snapshot backup copies.
+You can use the SnapCenter Plug-in for Microsoft Windows in VMware environments to create and manage LUNs and manage the Snapshot copies.
 
 == Supported VMware guest OS platforms
 
