@@ -19,7 +19,7 @@ settings:
     - name: SnapCenter Software
       url: /snapcenter-46
       version-number: "4.6"
-
+      
 sidebar:
   entries:
     - title: SnapCenter Software 4.5 docs
@@ -109,3 +109,4 @@ homepage:
           url: https://www.netapp.com/data-protection/backup-recovery/snapcenter-backup-management/documentation/#ProseArticleLinkList13
         - title: NetApp Knowledge Base - SnapCenter
           url: https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter
+
